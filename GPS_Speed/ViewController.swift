@@ -35,9 +35,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.stopUpdatingLocation()
-        }
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.stopUpdatingLocation()
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +49,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
         case .restricted, .denied:
             break
         case .authorizedAlways, .authorizedWhenInUse:
