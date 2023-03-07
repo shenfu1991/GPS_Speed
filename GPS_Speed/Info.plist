@@ -21,7 +21,15 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>hhh</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>processing</string>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App_Name requires user’s location for better user experience.</string>
+	<key>CFBundleDisplayName</key>
+	<string>GPS Speed</string>
 </dict>
 </plist>
